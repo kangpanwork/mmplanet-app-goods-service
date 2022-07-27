@@ -1,0 +1,12 @@
+{
+  "model": {
+    "sort": {
+      "key": "CREATE_TIME",
+      "order": "DESC"
+    }
+  },
+  "page": {
+    "pageNum": 1,
+    "pageSize": 10
+  }
+}

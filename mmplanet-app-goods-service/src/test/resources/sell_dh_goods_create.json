@@ -1,0 +1,53 @@
+ {
+    "activityEndTime": null,
+    "activityStartTime": null,
+    "attribute": "FALSE",
+    "attributeDesc": "",
+    "attributeList": [
+      {
+        "attrName": "重量",
+        "attrValues": [
+          "40g"
+        ],
+        "sn": 0
+      }
+    ],
+    "auditId": "cf213b0ff441ac40320d8183abcdaadc",
+    "brand": null,
+    "categoryId": "9dde5d405cbc42dba1c78c0dd2cc0f91",
+    "content": "",
+    "expressType": "FREE",
+    "expressTypeValue": "0",
+    "goodsTypeCode": "SELL",
+    "id": null,
+    "images": [
+      "http://chaowuge-private.oss-cn-shanghai.aliyuncs.com/image/1658386121728.jpg"
+    ],
+    "isTop": 0,
+    "shopId": "e4f3498338a441cca58e572908ea79f8",
+    "skuList": [
+      {
+        "barcode": null,
+        "costPrice": "0.01",
+        "dSaasNo": "1114",
+        "goodsCode": null,
+        "goodsId": null,
+        "id": null,
+        "images": null,
+        "isPurchase": 1,
+        "originalPrice": null,
+        "price": "0.01",
+        "restrictionNum": 0,
+        "restrictionNumText": "0",
+        "saasNo": null,
+        "specDesc": "40g",
+        "stock": "99",
+        "weight": null
+      }
+    ],
+    "smallImage": "http://chaowuge-private.oss-cn-shanghai.aliyuncs.com/image/1658386121728.jpg",
+    "stockReduce": "ORDER_REDUCE",
+    "subTitle": "",
+    "title": "测试大货",
+    "unifiedExpress": null
+  }

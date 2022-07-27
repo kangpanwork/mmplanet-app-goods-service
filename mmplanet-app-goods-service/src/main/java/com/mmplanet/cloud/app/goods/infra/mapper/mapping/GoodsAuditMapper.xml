@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mmplanet.cloud.app.goods.infra.mapper.GoodsAuditMapper">
+
+    <resultMap id="resultMap" type="java.util.Map">
+        <result property="id" column="id" javaType="java.lang.String"/>
+        <result property="goodsId" column="goodsId" javaType="java.lang.String"/>
+        <result property="shopId" column="shopId" javaType="java.lang.String"/>
+        <result property="title" column="title" javaType="java.lang.String"/>
+        <result property="subTitle" column="subTitle" javaType="java.lang.String"/>
+        <result property="categoryId" column="categoryId" javaType="java.lang.String"/>
+        <result property="goodsTypeCode" column="goodsTypeCode" javaType="java.lang.String"/>
+        <result property="detailContent" column="detailContent" javaType="java.lang.String"/>
+        <result property="rejectReason" column="rejectReason" javaType="java.lang.String"/>
+        <result property="status" column="status" javaType="java.lang.String"/>
+        <result property="createTime" column="createTime" javaType="java.util.Date"/>
+        <result property="createUser" column="createUser" javaType="java.lang.String"/>
+        <result property="auditUser" column="auditUser" javaType="java.lang.String"/>
+        <result property="auditTime" column="auditTime" javaType="java.util.Date"/>
+        <result property="userId" column="userId" javaType="java.lang.String"/>
+        <result property="shopType" column="shopType" javaType="java.lang.String"/>
+        <result property="minSellingPrice" column="minSellingPrice" javaType="java.math.BigDecimal"/>
+        <result property="maxSellingPrice" column="maxSellingPrice" javaType="java.math.BigDecimal"/>
+        <result property="smallImage" column="smallImage" javaType="java.lang.String"/>
+        <result property="handleNode" column="handleNode" javaType="java.lang.String"/>
+    </resultMap>
+
+    <select id="queryAuditPage" resultMap="resultMap">
+        SELECT
+        a.id as id,
+        a.goods_id as goodsId,
+        a.shop_id as shopId,
+        a.title as title,
+        a.sub_title as subTitle,
+        a.category_id as categoryId,
+        a.goods_type_code as goodsTypeCode,
+        a.detail_content as detailContent,
+        a.reject_reason as rejectReason,
+        a.status as auditStatus,
+        a.create_time as createTime,
+        a.create_user as createUser,
+        a.audit_user as auditUser,
+        a.audit_time as auditTime,
+        a.user_id as userId,
+        a.shop_type as shopType,
+        a.min_selling_price as minSellingPrice,
+        a.max_selling_price as maxSellingPrice,
+        a.small_image as smallImage,
+        p.handle_node as handleNode,
+        p.handler as dealerId
+        FROM chh_audit_process p
+        LEFT JOIN chh_goods_audit a
+        ON p.audit_id = a.id
+        WHERE a.deleted = 0
+        <if test="query.id != null and query.id !=''">
+            AND a.id = #{query.id}
+        </if>
+        <if test="query.goodsId != null and query.goodsId !=''">
+            AND a.goods_id = #{query.goodsId}
+        </if>
+        <if test="query.title != null and query.title !=''">
+            AND a.title like concat('%',#{query.title},'%')
+        </if>
+        <if test="query.shopId != null and query.shopId !=''">
+            AND a.shop_id = #{query.shopId}
+        </if>
+        <if test="query.categoryId != null and query.categoryId !=''">
+            AND a.category_id = #{query.categoryId}
+        </if>
+        <if test="query.goodsTypeCode != null and query.goodsTypeCode !=''">
+            AND a.goods_type_code = #{query.goodsTypeCode}
+        </if>
+        <if test="query.auditStatus != null and query.auditStatus !=''">
+            AND p.audit_status = #{query.auditStatus}
+        </if>
+        <if test="query.handleNode != null and query.handleNode !=''">
+            AND p.handle_node = #{query.handleNode}
+        </if>
+        <if test="query.handler != null and query.handler !=''">
+            AND p.handler = #{query.handler}
+        </if>
+        order by p.create_time desc
+    </select>
+</mapper>

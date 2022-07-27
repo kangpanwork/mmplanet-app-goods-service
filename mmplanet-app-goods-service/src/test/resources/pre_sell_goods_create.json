@@ -1,0 +1,44 @@
+{
+  "activityEndTime": "2022-07-22 12:00",
+  "activityStartTime": "2022-07-20 12:00",
+  "attribute": "FALSE",
+  "attributeDesc": "",
+  "attributeList": [
+    {
+      "attrName": "颜色",
+      "attrValues": [
+        "红"
+      ],
+      "sn": 0
+    }
+  ],
+  "categoryId": "2202ebaa3e2b4ca18b1d987a9c744145",
+  "content": "",
+  "expressType": "FREE",
+  "expressTypeValue": "0",
+  "goodsTypeCode": "PRE_SELL",
+  "images": [
+    "http://chaowuge-private.oss-cn-shanghai.aliyuncs.com/image/1658287361316.jpg"
+  ],
+  "isTop": 0,
+  "shopId": "e4f3498338a441cca58e572908ea79f8",
+  "shopType": "SMALL_B",
+  "skuList": [
+    {
+      "costPrice": 0.01,
+      "dealerId": "1d0a44ece0a64c36b9796bd2e3b87163",
+      "images": "http://chaowuge-private.oss-cn-shanghai.aliyuncs.com/image/1658287354780.jpg",
+      "isPurchase": 1,
+      "price": 0.01,
+      "restrictionNum": 0,
+      "saasNo": "3-12211",
+      "specDesc": "红",
+      "stock": 99
+    }
+  ],
+  "smallImage": "http://chaowuge-private.oss-cn-shanghai.aliyuncs.com/image/1658287361316.jpg",
+  "stockReduce": "ORDER_REDUCE",
+  "subTitle": "",
+  "title": "这是一个预售",
+  "userId": "572ebdac8b44471ba5238add35767dc2"
+}

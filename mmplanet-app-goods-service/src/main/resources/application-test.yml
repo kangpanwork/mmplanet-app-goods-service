@@ -1,0 +1,12 @@
+server:
+  port: 9003
+
+spring:
+  cloud:
+    nacos:
+      config:
+        file-extension: yaml
+        server-addr: 47.110.127.82:8805
+  config:
+    # 因为springboot 2.4版本以后默认关闭加载bootstrap.yml，所以只能通过此方式连接到nacos config
+    import: nacos:${spring.application.name}-${spring.profiles.active}.${spring.cloud.nacos.config.file-extension}

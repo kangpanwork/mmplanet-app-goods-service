@@ -1,0 +1,19 @@
+{
+  "name": "运费模板-测试",
+  "chargeType": "PREPAYMENT",
+  "rules": [
+    {
+      "provinceCode": "11",
+      "provinceName": "北京市",
+      "cityCode": "1101",
+      "cityName": "市辖区",
+      "areaCode": "110116",
+      "areaName": "怀柔区",
+      "chargeWay": "PIECE",
+      "firstCharge": 88.96,
+      "firstChargeRange": 48.34,
+      "renewChargeStep": 17.98,
+      "renewCharge": 6.11
+    }
+  ]
+}

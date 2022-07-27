@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mmplanet.cloud.app.goods.infra.mapper.SkuMapper">
+
+    <select id="findByGoodsId" resultType="com.mmplanet.cloud.app.goods.infra.entity.SkuEntity">
+        SELECT * FROM chh_sku WHERE goods_id = #{goodsId}
+        <if test="isPurchase != null and isPurchase">
+            AND is_purchase = 1
+        </if>
+        <if test="deleted != null and !deleted">
+            AND deleted = 0
+        </if>
+    </select>
+
+    <select id="get" resultType="com.mmplanet.cloud.app.goods.infra.entity.SkuEntity">
+        SELECT * FROM chh_sku WHERE
+        <foreach collection="skuIds" item="item" open=" id IN (" close=")" separator=",">
+            #{item}
+        </foreach>
+    </select>
+</mapper>

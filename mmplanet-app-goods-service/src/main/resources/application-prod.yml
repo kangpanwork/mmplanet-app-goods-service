@@ -1,0 +1,74 @@
+server:
+  port: 9003
+
+spring:
+  cloud:
+    nacos:
+      username: nocas
+      password: nocas12345!@#$%
+      discovery:
+        server-addr: 172.17.246.249:8848
+
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 10MB
+
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    deserialization:
+      fail-on-unknown-properties: false
+
+  ## redis start ##
+  redis:
+    database: 0
+    #host: 192.168.31.209
+    host: r-uf6kvbp4ntpqo6q56m.redis.rds.aliyuncs.com
+    port: 6379
+    username: r-uf6kvbp4ntpqo6q56m
+    password: MMXQredis123!@#$4
+    timeout: 3000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-wait: -1ms
+        max-idle: 8
+        min-idle: 0
+  ## redis end ##
+
+  ## datasource start ##
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://rm-uf698dyezn170a61e.mysql.rds.aliyuncs.com:3306/chh_mmplanet_goods?allowPublicKeyRetrieval=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+      username: mmxqmysql
+      password: mmxqmysql123!@#QWE
+      initial-size: 5 #初始化时建立物理连接的个数。初始化发生在显示调用init方法，或者第一次getConnection时
+      min-idle: 5 #最小连接池数量
+      max-active: 20 #最大连接池数量
+      max-wait: 60000 #获取连接时最大等待时间，单位毫秒。配置了maxWait之后，缺省启用公平锁，并发效率会有所下降，如果需要可以通过配置useUnfairLock属性为true使用非公平锁。
+      use-unfair-lock: true
+      validation-query: SELECT 1 #用来检测连接是否有效的sql，要求是一个查询语句，常用select 'x'。如果validationQuery为null，testOnBorrow、testOnReturn、testWhileIdle都不会起作用。
+      validation-query-timeout: 2 #单位：秒，检测连接是否有效的超时时间。底层调用jdbc Statement对象的void setQueryTimeout(int seconds)方法
+      test-while-idle: true #建议配置为true，不影响性能，并且保证安全性。申请连接的时候检测，如果空闲时间大于timeBetweenEvictionRunsMillis，执行validationQuery检测连接是否有效。
+      test-on-borrow: false #申请连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能。
+      test-on-return: false #归还连接时执行validationQuery检测连接是否有效，做了这个配置会降低性能。
+      reset-stat-enable: true
+      connection-init-sqls:
+        'set names utf8mb4;'
+      filters: stat,wall
+      stat-view-servlet:
+        login-username: mmplanet
+        login-password: mmplanet
+  ## datasource end ##
+
+## mybatis stat ##
+mybatis-plus:
+  mapper-locations: classpath*:com/mmplanet/cloud/app/goods/infra/mapper/mapping/*Mapper.xml
+  typeAliasesPackage: com.mmplanet.cloud.app.entity.mysql
+  configuration:
+    map-underscore-to-camel-case: true
+    cache-enabled: false
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+## mybatis end ##

@@ -1,0 +1,70 @@
+{
+  "attribute": "FALSE",
+  "attributeList": [
+    {
+      "attrName": "身高",
+      "attrValues": [
+        "20cm",
+        "15"
+      ]
+    },
+    {
+      "attrName": "体型",
+      "attrValues": [
+        "正常体",
+        "特体"
+      ]
+    }
+  ],
+  "categoryId": "bb62e4a87e154ba49be1e7857f98ffc7",
+  "content": "<p>这是一个商品详情页<span style=\"background-color: red;\">哈哈哈哈</span><span style=\"background-color: red; color: purple;\">哈哈哈</span><span style=\"color: purple;\">和细菌学家下降</span><img src=\"https://chaowuge-private.oss-cn-shanghai.aliyuncs.com/app/android/2022/6/161655360729401?x-oss-process=image/resize,w_500,m_lfit\" alt=\"图像\"></p>",
+  "expressType": "FREE",
+  "expressTypeValue": "0",
+  "goodsTypeCode": "PRI",
+  "images": [
+    "https://chaowuge-private.oss-cn-shanghai.aliyuncs.com/ios/d5a42029d46d4cfa95fefb1de7f8279e/16553607460.jpeg",
+    "https://chaowuge-private.oss-cn-shanghai.aliyuncs.com/ios/d5a42029d46d4cfa95fefb1de7f8279e/16553607461.jpeg",
+    "https://chaowuge-private.oss-cn-shanghai.aliyuncs.com/ios/d5a42029d46d4cfa95fefb1de7f8279e/16553607462.jpeg"
+  ],
+  "shopId": "b2a13c6016fe42538d4bb0d27c9fb2c4",
+  "shopType": "DEALER",
+  "skuList": [
+    {
+      "costPrice": 10,
+      "images": "https://chaowuge-private.oss-cn-shanghai.aliyuncs.com/ios/d5a42029d46d4cfa95fefb1de7f8279e/1655360817.jpeg",
+      "price": 0.01,
+      "specDesc": "20cm*正常体",
+      "stock": 100,
+      "weight": 1
+    },
+    {
+      "costPrice": 12,
+      "images": "https://chaowuge-private.oss-cn-shanghai.aliyuncs.com/ios/d5a42029d46d4cfa95fefb1de7f8279e/1655360839.jpeg",
+      "price": 10,
+      "specDesc": "20cm*特体",
+      "stock": 100,
+      "weight": 0.2
+    },
+    {
+      "costPrice": 10,
+      "images": "https://chaowuge-private.oss-cn-shanghai.aliyuncs.com/ios/d5a42029d46d4cfa95fefb1de7f8279e/1655360856.jpeg",
+      "price": 13,
+      "specDesc": "15*正常体",
+      "stock": 13,
+      "weight": 2
+    },
+    {
+      "costPrice": 0.01,
+      "images": "https://chaowuge-private.oss-cn-shanghai.aliyuncs.com/ios/d5a42029d46d4cfa95fefb1de7f8279e/1655360872.jpeg",
+      "price": 0.01,
+      "specDesc": "15*特体",
+      "stock": 100,
+      "weight": 3
+    }
+  ],
+  "smallImage": "https://chaowuge-private.oss-cn-shanghai.aliyuncs.com/ios/d5a42029d46d4cfa95fefb1de7f8279e/1655360753.jpeg?x-oss-process=image/resize,m_fill,h_400,w_400",
+  "stockReduce": "ORDER_REDUCE",
+  "subTitle": "私发-商品测试",
+  "title": "私发-商品测试",
+  "userId": "c652ae33348b47e28a36e6997a111de4"
+}

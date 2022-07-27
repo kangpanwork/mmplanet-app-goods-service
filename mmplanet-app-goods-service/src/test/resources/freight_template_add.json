@@ -1,0 +1,27 @@
+{
+  "name": "预付模板-demo",
+  "userId": "0001",
+  "shopId": "0001",
+  "type": "PREPAYMENT",
+  "chargeWay": "PIECE",
+  "rules": [
+    {
+      "provinceCode": "11",
+      "provinceName": "北京市",
+      "cityCode": "1101",
+      "cityName": "市辖区",
+      "areaCode": "110116",
+      "areaName": "怀柔区",
+      "firstCharge": 1.00,
+      "firstChargeRange": 1,
+      "renewChargeStep": 1
+    }
+  ],
+  "defaultRule": {
+    "chargeWay": "PIECE",
+    "firstCharge": 1,
+    "firstChargeRange": 1.00,
+    "renewChargeStep": 1,
+    "renewCharge": 0.5
+  }
+}

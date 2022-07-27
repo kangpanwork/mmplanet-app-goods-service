@@ -1,0 +1,11 @@
+[{
+  "name": "身高",
+  "sort": 1,
+  "selectValues": ["20cm"],
+  "status": "ENABLE"
+},{
+  "name": "体型",
+  "sort": 1,
+  "selectValues": ["正常体"],
+  "status": "ENABLE"
+}]
